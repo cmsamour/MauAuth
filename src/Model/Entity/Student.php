@@ -9,7 +9,10 @@ class Student extends Entity
     protected $_accessible = [
         "name" => true,
         "email" => true,
-        "phone_no" => true
+        "phone_no" => true,
+        "status" => true,
+        "created" => true,
+        "modified" => true
     ];
 }
 
