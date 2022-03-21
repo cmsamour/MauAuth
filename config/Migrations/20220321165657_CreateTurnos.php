@@ -19,8 +19,15 @@ class CreateTurnos extends AbstractMigration
         $table->addColumn('nombre', 'string', [
             'limit' => 120,
             'null' => false,
-	]);
-	
+	    ]);
+        $table->addColumn('horainicial', 'timestamp', [
+        'default' => 'CURRENT_TIMESTAMP',
+        'null' => false,
+        ]);
+        $table->addColumn('horafinal', 'timestamp', [
+            'default' => 'CURRENT_TIMESTAMP',
+            'null' => false,
+            ]);
         $table->addColumn('created', 'timestamp', [
             'default' => 'CURRENT_TIMESTAMP',
             'null' => false,
