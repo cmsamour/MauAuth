@@ -76,11 +76,7 @@
                             <td><?= h($movimientodetalles->pbruto) ?></td>
                             <td><?= h($movimientodetalles->tara) ?></td>
                             <td><?= h($movimientodetalles->pneto) ?></td>
-                            <!--
-                            <td><?=// h($movimientodetalles->created) ?></td>
-                            <td><?=// h($movimientodetalles->modified) ?></td>
-                            <td><?=// h($movimientodetalles->user_id) ?></td>
-                        -->
+                            
                             <td class="actions">
                                 <?= $this->Html->link(__('View'), ['controller' => 'Movimientodetalles', 'action' => 'view', $movimientodetalles->id]) ?>
                                 <?= $this->Html->link(__('Edit'), ['controller' => 'Movimientodetalles', 'action' => 'edit', $movimientodetalles->id]) ?>
