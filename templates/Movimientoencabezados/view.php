@@ -16,7 +16,7 @@
     </aside>
     <div class="column-responsive column-80">
         <div class="movimientoencabezados view content">
-            <h3><?= echo 'MOVIMIENTO # '.h($movimientoencabezado->id) ?></h3>
+            <h3><?= h('Numero de Movimiento: '.$movimientoencabezado->id) ?></h3>
             <table>
             <tr>
                     <th><?= __('Fecha') ?></th>
