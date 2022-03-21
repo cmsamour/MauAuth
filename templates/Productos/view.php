@@ -20,11 +20,11 @@
             <table>
                 <tr>
                     <th><?= __('Medida') ?></th>
-                    <td><?= $producto->has('medida') ? $this->Html->link($producto->medida->id, ['controller' => 'Medidas', 'action' => 'view', $producto->medida->id]) : '' ?></td>
+                    <td><?= $producto->has('medida') ? $this->Html->link($producto->medida->nombre, ['controller' => 'Medidas', 'action' => 'view', $producto->medida->id]) : '' ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Familia') ?></th>
-                    <td><?= $producto->has('familia') ? $this->Html->link($producto->familia->id, ['controller' => 'Familias', 'action' => 'view', $producto->familia->id]) : '' ?></td>
+                    <td><?= $producto->has('familia') ? $this->Html->link($producto->familia->nombre, ['controller' => 'Familias', 'action' => 'view', $producto->familia->id]) : '' ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Nombre') ?></th>
@@ -32,7 +32,7 @@
                 </tr>
                 <tr>
                     <th><?= __('User') ?></th>
-                    <td><?= $producto->has('user') ? $this->Html->link($producto->user->id, ['controller' => 'Users', 'action' => 'view', $producto->user->id]) : '' ?></td>
+                    <td><?= $producto->has('user') ? $this->Html->link($producto->user->nombre, ['controller' => 'Users', 'action' => 'view', $producto->user->id]) : '' ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Id') ?></th>
