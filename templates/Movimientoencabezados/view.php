@@ -7,12 +7,12 @@
 <div class="row">
     <aside class="column">
         <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('REGRESAR A MOVIMIENTOS'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('Edit Movimientoencabezado'), ['action' => 'edit', $movimientoencabezado->id], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete Movimientoencabezado'), ['action' => 'delete', $movimientoencabezado->id], ['confirm' => __('Are you sure you want to delete # {0}?', $movimientoencabezado->id), 'class' => 'side-nav-item']) ?>
+            <h4 class="heading"><?= __('MENU MOVIMIENTOS') ?></h4>
+            <?= $this->Html->link(__('REGRESAR'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('MODIFICAR'), ['action' => 'edit', $movimientoencabezado->id], ['class' => 'side-nav-item']) ?>
+            <?= $this->Form->postLink(__('ELIMINAR'), ['action' => 'delete', $movimientoencabezado->id], ['confirm' => __('Are you sure you want to delete # {0}?', $movimientoencabezado->id), 'class' => 'side-nav-item']) ?>
             
-            <?= $this->Html->link(__('New Movimientoencabezado'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
+            <?= $this->Html->link(__('CREAR'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
         </div>
     </aside>
     <div class="column-responsive column-80">
