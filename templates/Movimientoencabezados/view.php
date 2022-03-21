@@ -16,8 +16,12 @@
     </aside>
     <div class="column-responsive column-80">
         <div class="movimientoencabezados view content">
-            <h3><?= h($movimientoencabezado->id) ?></h3>
+            <h3><?= echo "MOVIMIENTO # ";h($movimientoencabezado->id) ?></h3>
             <table>
+            <tr>
+                    <th><?= __('Fecha') ?></th>
+                    <td><?= h($movimientoencabezado->fecha) ?></td>
+                </tr>
                 <tr>
                     <th><?= __('Proveedor') ?></th>
                     <td><?= $movimientoencabezado->has('proveedor') ? $this->Html->link($movimientoencabezado->proveedor->nombre, ['controller' => 'Proveedors', 'action' => 'view', $movimientoencabezado->proveedor->id]) : '' ?></td>
@@ -34,14 +38,7 @@
                     <th><?= __('User') ?></th>
                     <td><?= $movimientoencabezado->has('user') ? $this->Html->link($movimientoencabezado->user->email, ['controller' => 'Users', 'action' => 'view', $movimientoencabezado->user->id]) : '' ?></td>
                 </tr>
-                <tr>
-                    <th><?= __('Id') ?></th>
-                    <td><?= $this->Number->format($movimientoencabezado->id) ?></td>
-                </tr>
-                <tr>
-                    <th><?= __('Fecha') ?></th>
-                    <td><?= h($movimientoencabezado->fecha) ?></td>
-                </tr>
+                
                 <tr>
                     <th><?= __('Created') ?></th>
                     <td><?= h($movimientoencabezado->created) ?></td>
