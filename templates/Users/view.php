@@ -20,8 +20,8 @@
             <table>
                 <tr>
                     <th><?= __('Email') ?></th>
-                    <td><?= h($user->email) ?>
-                    </td><?= h(print_r($logeado) ?></td>
+                    <td><?= h($user->email) ?></td>
+                    
                 </tr>
                 <tr>
                     <th><?= __('Phone Number') ?></th>
