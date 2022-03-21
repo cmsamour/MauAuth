@@ -76,13 +76,14 @@
                             <td><?= h($movimientodetalles->created) ?></td>
                             <td><?= h($movimientodetalles->modified) ?></td>
                             <td><?= h($movimientodetalles->user_id) ?></td>
+                            <?php $count++;?>
+                            <td><?php h('Numero'.$count)?></td>
                             <td class="actions">
                                 <?= $this->Html->link(__('VER'), ['controller' => 'Movimientodetalles', 'action' => 'view', $movimientodetalles->id]) ?>
                                 <?= $this->Html->link(__('MODIFICAR'), ['controller' => 'Movimientodetalles', 'action' => 'edit', $movimientodetalles->id]) ?>
                                 <?= $this->Form->postLink(__('BORRAR'), ['controller' => 'Movimientodetalles', 'action' => 'delete', $movimientodetalles->id], ['confirm' => __('Are you sure you want to delete # {0}?', $movimientodetalles->id)]) ?>
                             </td>
-                            <?php $count++;?>
-                            <td><?php h('Numero'.$count)?></td>
+                            
                         </tr>
                          <?php endforeach; ?>
                     </table>
