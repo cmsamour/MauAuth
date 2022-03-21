@@ -49,7 +49,7 @@
                 </tr>
             </table>
             <div class="related">
-                <h4><?= __('Related Movimientodetalles') ?></h4>
+                <h4><?= __('PRODUCTOS EN ESTA LISTA') ?></h4>
                 
                 <?php if (!empty($movimientoencabezado->movimientodetalles)) : ?>
                 <div class="table-responsive">
@@ -66,8 +66,9 @@
                             <th class="actions"><?= __('Actions') ?></th>
                             <th><?= __('#') ?></th>
                         </tr>
+                        <?php $count = 0;?>
                         <?php foreach ($movimientoencabezado->movimientodetalles as $movimientodetalles) : ?>
-                            <?php $count = 0;?>
+                            
                             <tr>
                             <td><?= h($movimientodetalles->id) ?></td>
                             <td><?= h($movimientodetalles->producto->nombre) ?></td>
