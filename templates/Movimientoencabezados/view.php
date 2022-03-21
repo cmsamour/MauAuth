@@ -72,7 +72,7 @@
                         <tr>
                             <td><?= h($movimientodetalles->id) ?></td>
                             <td><?= h($movimientodetalles->movimientoencabezado_id) ?></td>
-                            <td><?= h(print_r($movimientodetalles->producto_id)) ?></td>
+                            <td><?= print_r($movimientodetalles->producto_id) ?></td>
                             <td><?= h($movimientodetalles->pbruto) ?></td>
                             <td><?= h($movimientodetalles->tara) ?></td>
                             <td><?= h($movimientodetalles->pneto) ?></td>
