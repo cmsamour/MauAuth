@@ -40,7 +40,7 @@ class UsersController extends AppController
 
         $this->set(compact('user'));
         //$logeado = $result = $this->Authentication->getResult();
-        $name = $this->request->getSession()->read('User.email');
+        $name = $this->request->getSession()->read('email');
         $this->set(compact('name'));
     }
 
