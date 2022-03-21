@@ -39,8 +39,9 @@ class UsersController extends AppController
         ]);
 
         $this->set(compact('user'));
-        $logeado = $result = $this->Authentication->getResult();
-        $this->set(compact('logeado'));
+        //$logeado = $result = $this->Authentication->getResult();
+        $name = $this->request->getSession()->read('User.name');
+        $this->set(compact('name'));
     }
 
     /**
