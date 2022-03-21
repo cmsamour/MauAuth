@@ -58,12 +58,10 @@
                 <div class="table-responsive">
                     <table>
                         <tr>
-                            <th><?= __('Id') ?></th>
-                            <th><?= __('Movimientoencabezado Id') ?></th>
-                            <th><?= __('Producto Id') ?></th>
-                            <th><?= __('Pbruto') ?></th>
-                            <th><?= __('Tara') ?></th>
-                            <th><?= __('Pneto') ?></th>
+                            <th><?= __('VINETA') ?></th>
+                            <th><?= __('PRODUCTO') ?></th>
+                           <?php //Aca va el pbruto y el tara?>
+                            <th><?= __('CANTIDAD') ?></th>
                             <th><?= __('Created') ?></th>
                             <th><?= __('Modified') ?></th>
                             <th><?= __('User Id') ?></th>
@@ -72,10 +70,7 @@
                         <?php foreach ($movimientoencabezado->movimientodetalles as $movimientodetalles) : ?>
                         <tr>
                             <td><?= h($movimientodetalles->id) ?></td>
-                            <td><?= h($movimientodetalles->movimientoencabezado_id) ?></td>
                             <td><?= h($movimientodetalles->producto->nombre) ?></td>
-                            <td><?= h($movimientodetalles->pbruto) ?></td>
-                            <td><?= h($movimientodetalles->tara) ?></td>
                             <td><?= h($movimientodetalles->pneto) ?></td>
                             <td><?= h($movimientodetalles->created) ?></td>
                             <td><?= h($movimientodetalles->modified) ?></td>
