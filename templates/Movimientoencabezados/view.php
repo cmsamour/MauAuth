@@ -20,15 +20,15 @@
             <table>
                 <tr>
                     <th><?= __('Proveedor') ?></th>
-                    <td><?= $movimientoencabezado->has('proveedor') ? $this->Html->link($movimientoencabezado->proveedor->nombre, ['controller' => 'Proveedors', 'action' => 'view', $movimientoencabezado->proveedor->id]) : '' ?></td>
+                    <td><?= $movimientoencabezado->has('proveedor') ? $this->Html->link($movimientoencabezado->proveedor->id, ['controller' => 'Proveedors', 'action' => 'view', $movimientoencabezado->proveedor->id]) : '' ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Tipomovimiento') ?></th>
-                    <td><?= $movimientoencabezado->has('tipomovimiento') ? $this->Html->link($movimientoencabezado->tipomovimiento->nombre, ['controller' => 'Tipomovimientos', 'action' => 'view', $movimientoencabezado->tipomovimiento->id]) : '' ?></td>
+                    <td><?= $movimientoencabezado->has('tipomovimiento') ? $this->Html->link($movimientoencabezado->tipomovimiento->id, ['controller' => 'Tipomovimientos', 'action' => 'view', $movimientoencabezado->tipomovimiento->id]) : '' ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Turno') ?></th>
-                    <td><?= $movimientoencabezado->has('turno') ? $this->Html->link($movimientoencabezado->turno->nombre, ['controller' => 'Turnos', 'action' => 'view', $movimientoencabezado->turno->id]) : '' ?></td>
+                    <td><?= $movimientoencabezado->has('turno') ? $this->Html->link($movimientoencabezado->turno->id, ['controller' => 'Turnos', 'action' => 'view', $movimientoencabezado->turno->id]) : '' ?></td>
                 </tr>
                 <tr>
                     <th><?= __('User') ?></th>
@@ -53,7 +53,7 @@
             </table>
             <div class="related">
                 <h4><?= __('Related Movimientodetalles') ?></h4>
-                <?php if (!empty($movimientoencabezado->$movimientodetalles)) : ?>
+                <?php if (!empty($movimientoencabezado->movimientodetalles)) : ?>
                 <div class="table-responsive">
                     <table>
                         <tr>
@@ -72,11 +72,13 @@
                         <tr>
                             <td><?= h($movimientodetalles->id) ?></td>
                             <td><?= h($movimientodetalles->movimientoencabezado_id) ?></td>
-                            <td><?= print_r($movimientodetalles) ?></td>
+                            <td><?= h($movimientodetalles->producto_id) ?></td>
                             <td><?= h($movimientodetalles->pbruto) ?></td>
                             <td><?= h($movimientodetalles->tara) ?></td>
                             <td><?= h($movimientodetalles->pneto) ?></td>
-                            
+                            <td><?= h($movimientodetalles->created) ?></td>
+                            <td><?= h($movimientodetalles->modified) ?></td>
+                            <td><?= h($movimientodetalles->user_id) ?></td>
                             <td class="actions">
                                 <?= $this->Html->link(__('View'), ['controller' => 'Movimientodetalles', 'action' => 'view', $movimientodetalles->id]) ?>
                                 <?= $this->Html->link(__('Edit'), ['controller' => 'Movimientodetalles', 'action' => 'edit', $movimientodetalles->id]) ?>

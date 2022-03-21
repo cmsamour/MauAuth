@@ -24,8 +24,8 @@ class MovimientoencabezadosFixture extends TestFixture
                 'tipomovimiento_id' => 1,
                 'turno_id' => 1,
                 'fecha' => '2022-03-21',
-                'created' => 1647892386,
-                'modified' => 1647892386,
+                'created' => 1647901836,
+                'modified' => 1647901836,
                 'user_id' => 1,
             ],
         ];
