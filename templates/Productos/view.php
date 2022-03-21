@@ -12,6 +12,7 @@
             <?= $this->Form->postLink(__('Borrar Producto'), ['action' => 'delete', $producto->id], ['confirm' => __('Are you sure you want to delete # {0}?', $producto->id), 'class' => 'side-nav-item']) ?>
             <?= $this->Html->link(__('Vwe Productos'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
             <?= $this->Html->link(__('Nuevo Producto'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
+            
         </div>
     </aside>
     <div class="column-responsive column-80">
