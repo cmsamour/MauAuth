@@ -21,7 +21,7 @@
                 <tr>
                     <th><?= __('Email') ?></th>
                     <td><?= h($user->email) ?>
-                    </td><?= h($logeado['email']) ?></td>
+                    </td><?= h(print_r($logeado) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Phone Number') ?></th>
