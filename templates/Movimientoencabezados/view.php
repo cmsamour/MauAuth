@@ -53,6 +53,7 @@
                 
                 <?php if (!empty($movimientoencabezado->movimientodetalles)) : ?>
                 <div class="table-responsive">
+                <h4><?= __('Hay - '.$count($movimientoencabezado->movimientodetalles).' - Movimientos') ?></h4>
                     <table>
                         <tr>
                             <th><?= __('VINETA') ?></th>
