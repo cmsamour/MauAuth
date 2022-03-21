@@ -53,7 +53,7 @@
             </table>
             <div class="related">
                 <h4><?= __('Related Movimientodetalles') ?></h4>
-                <?php if (!empty($movimientodetalle->producto_id)) : ?>
+                <?php if (!empty($movimientoencabezado->$movimientodetalles)) : ?>
                 <div class="table-responsive">
                     <table>
                         <tr>
