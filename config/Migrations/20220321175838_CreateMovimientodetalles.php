@@ -24,7 +24,7 @@ class CreateMovimientodetalles extends AbstractMigration
             'limit' => 5,
             'null' => false,
 	    ]);
-        $table->addColumn('pruto', 'decimal', [
+        $table->addColumn('pbruto', 'decimal', [
             'default' => null,
             'null' => false,
             'precision' => 5,
