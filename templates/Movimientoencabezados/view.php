@@ -81,8 +81,8 @@
                                 <?= $this->Html->link(__('MODIFICAR'), ['controller' => 'Movimientodetalles', 'action' => 'edit', $movimientodetalles->id]) ?>
                                 <?= $this->Form->postLink(__('BORRAR'), ['controller' => 'Movimientodetalles', 'action' => 'delete', $movimientodetalles->id], ['confirm' => __('Are you sure you want to delete # {0}?', $movimientodetalles->id)]) ?>
                             </td>
-                            <?php $count ++;?>
-                            <td><?php h($count)?></td>
+                            <?php $count++;?>
+                            <td><?php __h('Numero'.$count)?></td>
                         </tr>
                          <?php endforeach; ?>
                     </table>
