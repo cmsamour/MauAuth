@@ -53,7 +53,7 @@
             </table>
             <div class="related">
                 <h4><?= __('Related Movimientodetalles') ?></h4>
-                <?php if (!empty($movimientoencabezado->movimientodetalles)) : ?>
+                <?php if (!empty($movimientodetalle->producto_id)) : ?>
                 <div class="table-responsive">
                     <table>
                         <tr>
@@ -72,7 +72,7 @@
                         <tr>
                             <td><?= h($movimientodetalles->id) ?></td>
                             <td><?= h($movimientodetalles->movimientoencabezado_id) ?></td>
-                            <td><?= print_r($movimientoencabezado) ?></td>
+                            <td><?= h($movimientodetalles->producto_id) ?></td>
                             <td><?= h($movimientodetalles->pbruto) ?></td>
                             <td><?= h($movimientodetalles->tara) ?></td>
                             <td><?= h($movimientodetalles->pneto) ?></td>
