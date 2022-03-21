@@ -30,7 +30,7 @@
                     <td><?= h($producto->nombre) ?></td>
                     <td><?= h($producto->created) ?></td>
                     <td><?= h($producto->modified) ?></td>
-                    <td><?= $producto->has('user') ? $this->Html->link($producto->user->nombre, ['controller' => 'Users', 'action' => 'view', $producto->user->id]) : '' ?></td>
+                    <td><?= $producto->has('user') ? $this->Html->link($producto->user->email, ['controller' => 'Users', 'action' => 'view', $producto->user->id]) : '' ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('View'), ['action' => 'view', $producto->id]) ?>
                         <?= $this->Html->link(__('Edit'), ['action' => 'edit', $producto->id]) ?>

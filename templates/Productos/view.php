@@ -32,7 +32,7 @@
                 </tr>
                 <tr>
                     <th><?= __('User') ?></th>
-                    <td><?= $producto->has('user') ? $this->Html->link($producto->user->nombre, ['controller' => 'Users', 'action' => 'view', $producto->user->id]) : '' ?></td>
+                    <td><?= $producto->has('user') ? $this->Html->link($producto->user->email, ['controller' => 'Users', 'action' => 'view', $producto->user->id]) : '' ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Id') ?></th>
