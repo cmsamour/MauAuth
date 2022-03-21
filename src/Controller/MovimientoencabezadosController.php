@@ -36,7 +36,7 @@ class MovimientoencabezadosController extends AppController
     public function view($id = null)
     {
         $movimientoencabezado = $this->Movimientoencabezados->get($id, [
-            'contain' => ['Proveedors', 'Tipomovimientos', 'Turnos', 'Users', 'Movimientodetalles','productos'],
+            'contain' => ['Proveedors', 'Tipomovimientos', 'Turnos', 'Users', 'Movimientodetalles'],
         ]);
 
         $this->set(compact('movimientoencabezado'));
