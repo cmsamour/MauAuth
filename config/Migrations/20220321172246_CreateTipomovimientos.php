@@ -15,6 +15,40 @@ class CreateTipomovimientos extends AbstractMigration
     public function change()
     {
         $table = $this->table('tipomovimientos');
+
+        $table->addColumn('nombre', 'string', [
+            'limit' => 120,
+            'null' => false,
+	    ]);
+        $table->addColumn('espositivo', 'boolean', [
+            'null' => false,
+        ]);
+        $table->addColumn('created', 'timestamp', [
+            'default' => 'CURRENT_TIMESTAMP',
+            'null' => false,
+        ]);
+        $table->addColumn('modified', 'timestamp', [
+            'default' => 'CURRENT_TIMESTAMP',
+            'null' => false,
+        ]);
+        $table->addColumn('user_id', 'integer', [
+            'limit' => 5,
+            'null' => false,
+	    ]);
+	    $table->addColumn('activo', 'boolean', [
+            'null' => false,
+        ]);
+
+
+        //$table->addPrimaryKey("id");
+        $table->addIndex([
+
+            'nombre',
+
+            ], [
+            'name' => 'UNIQUE_NOMBRE',
+            'unique' => true,
+            ]);
         $table->create();
     }
 }
