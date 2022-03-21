@@ -53,7 +53,7 @@
                 
                 <?php if (!empty($movimientoencabezado->movimientodetalles)) : ?>
                 <div class="table-responsive">
-                <h4><?= __('Hay - '.$movimientoencabezado->movimientodetalles->count().' - Movimientos') ?></h4>
+                
                     <table>
                         <tr>
                             <th><?= __('VINETA') ?></th>
@@ -64,9 +64,11 @@
                             <th><?= __('Modified') ?></th>
                             <th><?= __('User Id') ?></th>
                             <th class="actions"><?= __('Actions') ?></th>
+                            <th><?= __('#') ?></th>
                         </tr>
                         <?php foreach ($movimientoencabezado->movimientodetalles as $movimientodetalles) : ?>
-                        <tr>
+                            <?php $count = 0;?>
+                            <tr>
                             <td><?= h($movimientodetalles->id) ?></td>
                             <td><?= h($movimientodetalles->producto->nombre) ?></td>
                             <td><?= h($movimientodetalles->pneto) ?></td>
@@ -74,12 +76,14 @@
                             <td><?= h($movimientodetalles->modified) ?></td>
                             <td><?= h($movimientodetalles->user_id) ?></td>
                             <td class="actions">
-                                <?= $this->Html->link(__('View'), ['controller' => 'Movimientodetalles', 'action' => 'view', $movimientodetalles->id]) ?>
-                                <?= $this->Html->link(__('Edit'), ['controller' => 'Movimientodetalles', 'action' => 'edit', $movimientodetalles->id]) ?>
-                                <?= $this->Form->postLink(__('Delete'), ['controller' => 'Movimientodetalles', 'action' => 'delete', $movimientodetalles->id], ['confirm' => __('Are you sure you want to delete # {0}?', $movimientodetalles->id)]) ?>
+                                <?= $this->Html->link(__('VER'), ['controller' => 'Movimientodetalles', 'action' => 'view', $movimientodetalles->id]) ?>
+                                <?= $this->Html->link(__('MODIFICAR'), ['controller' => 'Movimientodetalles', 'action' => 'edit', $movimientodetalles->id]) ?>
+                                <?= $this->Form->postLink(__('BORRAR'), ['controller' => 'Movimientodetalles', 'action' => 'delete', $movimientodetalles->id], ['confirm' => __('Are you sure you want to delete # {0}?', $movimientodetalles->id)]) ?>
                             </td>
+                            <?php $count ++;?>
+                            <td><?php __($count)?></td>
                         </tr>
-                        <?php endforeach; ?>
+                         <?php endforeach; ?>
                     </table>
                 </div>
                 <?php endif; ?>
