@@ -53,6 +53,7 @@
             </table>
             <div class="related">
                 <h4><?= __('Related Movimientodetalles') ?></h4>
+                <?= print_r($movimientoencabezado)?>
                 <?php if (!empty($movimientoencabezado->movimientodetalles)) : ?>
                 <div class="table-responsive">
                     <table>
