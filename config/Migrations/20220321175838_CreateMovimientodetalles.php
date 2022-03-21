@@ -81,14 +81,21 @@ class CreateMovimientodetalles extends AbstractMigration
                     'name' => 'TARA',
                     
             ]);
-        $table->addForeignKey('user_id', 'users', ['id'],
-                            ['constraint'=>'fk_user_movimientodetalle']);
+        //$table->addForeignKey('user_id', 'users', ['id'],
+          //                  ['constraint'=>'fk_user_movimientodetalle']);
         
-        $table->addForeignKey('producto_id', 'prodcutos', ['id'],
-                            ['constraint'=>'fk_producto_movimientodetalle']);
+        //$table->addForeignKey('producto_id', 'prodcutos', ['id'],
+         //                   ['constraint'=>'fk_producto_movimientodetalle']);
 
         //$table->addForeignKey('movimientoencabezado_id', 'movimientoencabezados', ['id'],
         //                    ['constraint'=>'fk_movimientoencabezado_movimientodetalle']);            
+        $table->addForeignKey('user_id', 'users', ['id'],
+                            ['constraint'=>'fk_user_movimientodetalle']);
+        $table->addForeignKey('producto_id', 'productoss', ['id'],
+                            ['constraint'=>'fk_producto_movimientodetalle']);
+        $table->addForeignKey('movimientoencabezado_id', 'movimientoencabezados', ['id'],
+                            ['constraint'=>'fk_movimientoencabezado_movimientodetalle']);
+        
 
         $table->create();
     }
