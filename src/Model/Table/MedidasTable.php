@@ -43,7 +43,7 @@ class MedidasTable extends Table
         parent::initialize($config);
 
         $this->setTable('medidas');
-        $this->setDisplayField('id');
+        $this->setDisplayField('nombre');
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');

@@ -43,7 +43,7 @@ class FamiliasTable extends Table
         parent::initialize($config);
 
         $this->setTable('familias');
-        $this->setDisplayField('id');
+        $this->setDisplayField('nombre');
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
