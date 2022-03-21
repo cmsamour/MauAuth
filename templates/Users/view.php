@@ -22,7 +22,6 @@
                 <tr>
                     <th><?= __('Email') ?></th>
                     <td><?= h($user->email) ?></td>
-                    <td>></td>
                 </tr>
                 <tr>
                     <th><?= __('Phone Number') ?></th>
