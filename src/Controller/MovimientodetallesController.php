@@ -47,22 +47,9 @@ class MovimientodetallesController extends AppController
      *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      */
-    public function add($id = null)
+    public function add()
     {
-       if ($id <> 0){
-   
-        $movimientodetalle = $this->Movimientodetalles->get($id, [
-            'contain' => ['Movimientoencabezados', 'Productos', 'Users'],
-        ]);
-        
-        $this->set(compact('movimientodetalle'));
-        $movimientodetalle->movimientoencabezado_id = $id;
-        print_r($movimientodetalle);
-        
-
-
-    }
-       }
+       
             $movimientodetalle = $this->Movimientodetalles->newEmptyEntity();
             if ($this->request->is('post')) {
                 $movimientodetalle = $this->Movimientodetalles->patchEntity($movimientodetalle, $this->request->getData());
