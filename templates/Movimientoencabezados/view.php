@@ -65,7 +65,7 @@
                             <th><?= __('Modified') ?></th>
                             <th><?= __('User Id') ?></th>
                             <th class="actions"><?= __('Actions') ?></th>
-                            <th><?= __('#') ?></th>
+                           
                         </tr>
                         <?php $count = 0;?>
                         <?php foreach ($movimientoencabezado->movimientodetalles as $movimientodetalles) : ?>
@@ -82,8 +82,7 @@
                                 <?= $this->Html->link(__('MODIFICAR'), ['controller' => 'Movimientodetalles', 'action' => 'edit', $movimientodetalles->id]) ?>
                                 <?= $this->Form->postLink(__('BORRAR'), ['controller' => 'Movimientodetalles', 'action' => 'delete', $movimientodetalles->id], ['confirm' => __('Are you sure you want to delete # {0}?', $movimientodetalles->id)]) ?>
                             </td>
-                            <?php $count= $count+ 1;?>
-                            <td><?php h('Numero'.$count)?></td>
+                           
                         </tr>
                          <?php endforeach; ?>
                     </table>

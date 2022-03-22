@@ -5,16 +5,16 @@
  */
 ?>
 <div class="movimientoencabezados index content">
-    <?= $this->Html->link(__('New Movimientoencabezado'), ['action' => 'add'], ['class' => 'button float-right']) ?>
-    <h3><?= __('Movimientoencabezados') ?></h3>
+    <?= $this->Html->link(__('NUEVO LISTA DE EMPAQUE'), ['action' => 'add'], ['class' => 'button float-right']) ?>
+    <h3><?= __('MOVIMIENTOS') ?></h3>
     <div class="table-responsive">
         <table>
             <thead>
                 <tr>
-                    <th><?= $this->Paginator->sort('id') ?></th>
-                    <th><?= $this->Paginator->sort('proveedor_id') ?></th>
-                    <th><?= $this->Paginator->sort('tipomovimiento_id') ?></th>
-                    <th><?= $this->Paginator->sort('turno_id') ?></th>
+                    <th><?= $this->Paginator->sort('Numero') ?></th>
+                    <th><?= $this->Paginator->sort('PROVEEDOR') ?></th>
+                    <th><?= $this->Paginator->sort('TIPO MOVIMIENTO') ?></th>
+                    <th><?= $this->Paginator->sort('TURNO') ?></th>
                     <th><?= $this->Paginator->sort('fecha') ?></th>
                     <th><?= $this->Paginator->sort('created') ?></th>
                     <th><?= $this->Paginator->sort('modified') ?></th>
@@ -27,8 +27,8 @@
                 <tr>
                     <td><?= $this->Number->format($movimientoencabezado->id) ?></td>
                     <td><?= $movimientoencabezado->has('proveedor') ? $this->Html->link($movimientoencabezado->proveedor->id, ['controller' => 'Proveedors', 'action' => 'view', $movimientoencabezado->proveedor->id]) : '' ?></td>
-                    <td><?= $movimientoencabezado->has('tipomovimiento') ? $this->Html->link($movimientoencabezado->tipomovimiento->id, ['controller' => 'Tipomovimientos', 'action' => 'view', $movimientoencabezado->tipomovimiento->id]) : '' ?></td>
-                    <td><?= $movimientoencabezado->has('turno') ? $this->Html->link($movimientoencabezado->turno->id, ['controller' => 'Turnos', 'action' => 'view', $movimientoencabezado->turno->id]) : '' ?></td>
+                    <td><?= $movimientoencabezado->has('tipomovimiento') ? $this->Html->link($movimientoencabezado->tipomovimiento->nombre, ['controller' => 'Tipomovimientos', 'action' => 'view', $movimientoencabezado->tipomovimiento->id]) : '' ?></td>
+                    <td><?= $movimientoencabezado->has('turno') ? $this->Html->link($movimientoencabezado->turno->nombre, ['controller' => 'Turnos', 'action' => 'view', $movimientoencabezado->turno->id]) : '' ?></td>
                     <td><?= h($movimientoencabezado->fecha) ?></td>
                     <td><?= h($movimientoencabezado->created) ?></td>
                     <td><?= h($movimientoencabezado->modified) ?></td>
