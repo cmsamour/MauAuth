@@ -21,7 +21,8 @@
             <fieldset>
                 <legend><?= __('Add Movimientodetalle') ?></legend>
                 <?php
-                    echo $this->Form->control('movimientoencabezado_id', ['options' => $movimientoencabezados]);
+                    //echo $this->Form->control('movimientoencabezado_id', ['options' => $movimientoencabezados]);
+                    echo $this->Form->control('movimientoencabezado_id');
                     echo $this->Form->control('producto_id', ['options' => $productos]);
                     echo $this->Form->control('pbruto');
                     echo $this->Form->control('tara');
