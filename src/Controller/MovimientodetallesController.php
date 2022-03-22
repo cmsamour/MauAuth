@@ -49,7 +49,7 @@ class MovimientodetallesController extends AppController
      */
     public function add($id = null)
     {
-        if $id is_null(){
+        if ($id = null){
             $movimientodetalle = $this->Movimientodetalles->newEmptyEntity();
             if ($this->request->is('post')) {
                 $movimientodetalle = $this->Movimientodetalles->patchEntity($movimientodetalle, $this->request->getData());
@@ -71,7 +71,9 @@ class MovimientodetallesController extends AppController
             
             $this->set(compact('movimientodetalle'));
             $movimientodetalle->movimientoencabezado_id = $id;
+            print_r($movimientodetalle);
             
+
 
         }
     }
