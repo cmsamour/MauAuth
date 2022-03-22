@@ -62,7 +62,7 @@ class MovimientodetallesController extends AppController
             }
             
             //$movimientoencabezados = $this->Movimientodetalles->Movimientoencabezados->find('list', ['limit' => 200])->all();
-            $movimientoencabezados = $this->Movimientodetalles->Movimientoencabezados->get('23');
+            $movimientoencabezados = $this->Movimientodetalles->Movimientoencabezados->get($id);
             //$this->Movimientodetalles->Movimientoencabezados->id = $id;
             //$movimientoencabezados =  $this->Movimientodetalles->Movimientoencabezados;
             //print_r($movimientodetalle->movimientoencabezado_id);
