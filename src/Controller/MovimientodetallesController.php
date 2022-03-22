@@ -62,13 +62,13 @@ class MovimientodetallesController extends AppController
             }
             
             //$movimientoencabezados = $this->Movimientodetalles->Movimientoencabezados->find('list', ['limit' => 200])->all();
-            $movimientoencabezados  = $this->Movimientodetalles->Movimientoencabezados->get($id);
+            $this->Movimientodetalles->Movimientoencabezados->id = $id;
             //print_r($movimientodetalle->movimientoencabezado_id);
             //$movimientodetalle->movimientoencabezado_id  = $id;
             $productos = $this->Movimientodetalles->Productos->find('list', ['limit' => 200])->all();
             $users = $this->Movimientodetalles->Users->find('list', ['limit' => 200])->all();
-            $this->set(compact('movimientodetalle', 'movimientoencabezados', 'productos', 'users'));
-        
+            //$this->set(compact('movimientodetalle', 'movimientoencabezados', 'productos', 'users'));
+            $this->set(compact('movimientodetalle', 'productos', 'users'));
     }
 
     /**
