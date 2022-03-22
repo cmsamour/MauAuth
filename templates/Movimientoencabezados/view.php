@@ -88,7 +88,7 @@
                     </table>
                 </div>
                 <?php endif; ?>
-                <?= $this->Html->link(__('NUEVO LISTA DE VIÑETA'), ['controller' => 'Movimientodetalles',['action' => 'add'], ['class' => 'button float-right']) ?>
+                <?= $this->Html->link(__('New Movimientodetalle'), ['action' => 'add'], ['class' => 'button float-right']) ?>
             </div>
         </div>
     </div>
