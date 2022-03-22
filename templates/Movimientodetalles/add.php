@@ -16,7 +16,7 @@
     </aside>
     <div class="column-responsive column-80">
         <div class="movimientodetalles form content">
-            <?php print_r($movimientoencabezados); ?>
+            <?php print_r($movimientoencabezados->id); ?>
             <?= $this->Form->create($movimientodetalle) ?>
             <fieldset>
                 <legend><?= __('Add Movimientodetalle') ?></legend>
