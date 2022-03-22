@@ -11,23 +11,25 @@
         <table>
             <thead>
                 <tr>
+                    <th><?= $this->Paginator->sort('fecha') ?></th>
                     <th><?= $this->Paginator->sort('Numero') ?></th>
                     <th><?= $this->Paginator->sort('PROVEEDOR') ?></th>
                     <th><?= $this->Paginator->sort('TIPO MOVIMIENTO') ?></th>
                     <th><?= $this->Paginator->sort('TURNO') ?></th>
-                    <th><?= $this->Paginator->sort('fecha') ?></th>
+                    
                 
-                    <th class="actions"><?= __('Actions') ?></th>
+                    <th class="actions"><?= __('ACCIONES') ?></th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach ($movimientoencabezados as $movimientoencabezado): ?>
                 <tr>
+                    <td><?= h($movimientoencabezado->fecha) ?></td>
                     <td><?= $this->Number->format($movimientoencabezado->id) ?></td>
                     <td><?= $movimientoencabezado->has('proveedor') ? $this->Html->link($movimientoencabezado->proveedor->nombre, ['controller' => 'Proveedors', 'action' => 'view', $movimientoencabezado->proveedor->id]) : '' ?></td>
                     <td><?= $movimientoencabezado->has('tipomovimiento') ? $this->Html->link($movimientoencabezado->tipomovimiento->nombre, ['controller' => 'Tipomovimientos', 'action' => 'view', $movimientoencabezado->tipomovimiento->id]) : '' ?></td>
                     <td><?= $movimientoencabezado->has('turno') ? $this->Html->link($movimientoencabezado->turno->nombre, ['controller' => 'Turnos', 'action' => 'view', $movimientoencabezado->turno->id]) : '' ?></td>
-                    <td><?= h($movimientoencabezado->fecha) ?></td>
+                    
                     
                     <td class="actions">
                         <?= $this->Html->link(__('VER'), ['action' => 'view', $movimientoencabezado->id]) ?>
