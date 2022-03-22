@@ -22,8 +22,8 @@
                 <legend><?= __('Add Movimientodetalle') ?></legend>
                 <?php
                     //echo $this->Form->control('movimientoencabezado_id', ['options' => $movimientoencabezados]);
-                    echo $this->Form->control('movimientoencabezado_id',
-                    [['type' => 'text'],'value' => '4', 'label' => 'Ojaja']
+                    echo $this->Form->text('movimientoencabezado_id',
+                    ['value' => '4', 'label' => 'Ojaja']
                 );
                     echo $this->Form->control('producto_id', ['options' => $productos]);
                     echo $this->Form->control('pbruto');
