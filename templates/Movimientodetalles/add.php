@@ -16,13 +16,15 @@
     </aside>
     <div class="column-responsive column-80">
         <div class="movimientodetalles form content">
-            <?php print_r($movimientoencabezados->id); ?>
+            <?php //print_r($movimientoencabezados->id); ?>
             <?= $this->Form->create($movimientodetalle) ?>
             <fieldset>
                 <legend><?= __('Add Movimientodetalle') ?></legend>
                 <?php
                     //echo $this->Form->control('movimientoencabezado_id', ['options' => $movimientoencabezados]);
-                    echo $this->Form->control('movimientoencabezado_id');
+                    echo $this->Form->control('movimientoencabezado_id'[
+                        'value' => $movimientoencabezados->id
+                    ]));
                     echo $this->Form->control('producto_id', ['options' => $productos]);
                     echo $this->Form->control('pbruto');
                     echo $this->Form->control('tara');
