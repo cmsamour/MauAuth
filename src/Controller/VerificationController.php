@@ -46,7 +46,7 @@ class VerificationController extends AppController
 
 			if ($validToken){
 				$this->request->getSession()->delete('2fa_needed');
-				return $this->redirect(['controller'=> 'Users', 'action'=>'index']);
+				return $this->redirect(['controller'=> 'Movimientoencabezados', 'action'=>'index']);
 			}
 
 			$this->Flash->error('Codigo ingresado es incorrecto, pruebe otra vez.');
