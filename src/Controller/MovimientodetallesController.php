@@ -90,7 +90,7 @@ class MovimientodetallesController extends AppController
             if ($this->Movimientodetalles->save($movimientodetalle)) {
                 $this->Flash->success(__('The movimientodetalle has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['controller' => 'movimientoencabezados','action' => 'index']);
             }
             $this->Flash->error(__('The movimientodetalle could not be saved. Please, try again.'));
         }
