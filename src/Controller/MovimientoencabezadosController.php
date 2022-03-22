@@ -20,9 +20,7 @@ class MovimientoencabezadosController extends AppController
     {
         $this->paginate = [
             'contain' => ['Proveedors', 'Tipomovimientos', 'Turnos', 'Users'],
-            'limit' => 25,
-        'order' => [
-            'Movimientoencabezado.fecha' => 'asc'
+            
         ];
         $movimientoencabezados = $this->paginate($this->Movimientoencabezados);
 
