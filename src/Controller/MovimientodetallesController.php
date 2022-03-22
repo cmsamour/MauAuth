@@ -47,7 +47,7 @@ class MovimientodetallesController extends AppController
      *
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      */
-    public function add()
+    public function add($id = null)
     {
        
             $movimientodetalle = $this->Movimientodetalles->newEmptyEntity();
@@ -60,7 +60,9 @@ class MovimientodetallesController extends AppController
                 }
                 $this->Flash->error(__('The movimientodetalle could not be saved. Please, try again.'));
             }
-            $movimientoencabezados = $this->Movimientodetalles->Movimientoencabezados->find('list', ['limit' => 200])->all();
+            
+            //$movimientoencabezados = $this->Movimientodetalles->Movimientoencabezados->find('list', ['limit' => 200])->all();
+            $movimientoencabezados  = $this->Movimientoencabezados->get($id);
             $productos = $this->Movimientodetalles->Productos->find('list', ['limit' => 200])->all();
             $users = $this->Movimientodetalles->Users->find('list', ['limit' => 200])->all();
             $this->set(compact('movimientodetalle', 'movimientoencabezados', 'productos', 'users'));

@@ -53,6 +53,7 @@
                 <h4><?= __('PRODUCTOS EN ESTA LISTA') ?></h4>
                 
                 <?php if (!empty($movimientoencabezado->movimientodetalles)) : ?>
+                    <?= $this->Html->link(__('AGREGAR VIÑETA'), ['controller' => 'Movimientodetalles', 'action' => 'add', $movimientoencabezado->id]) ?>
                 <div class="table-responsive">
                 
                     <table>
