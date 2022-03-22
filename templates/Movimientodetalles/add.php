@@ -23,7 +23,7 @@
                 <?php
                     //echo $this->Form->control('movimientoencabezado_id', ['options' => $movimientoencabezados]);
                     echo $this->Form->text('movimientoencabezado_id',
-                    ['value' => $movimientoencabezados->id, 'label' => 'Ojaja','disabled' => 'true']
+                    ['value' => $movimientoencabezados->id]
                 );
                     echo $this->Form->control('producto_id', ['options' => $productos]);
                     echo $this->Form->control('pbruto');
